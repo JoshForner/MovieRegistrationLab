@@ -1,0 +1,45 @@
+﻿@model Movie
+@using System.Text.Json;
+@using Microsoft.AspNetCore.Http;
+
+@{
+    string list = Context.Session.GetString("Movies");
+    List<Movie> movies = JsonSerializer.Deserialize<List<Movie>>(list);
+
+
+    if (Model.ID > movies.Count || Model.ID <= 0)
+    {
+        <p>Not a valid index, pick a number between 1 and @movies.Count</p>
+        <form action="Store">
+            <input type="submit" value="Try Again" />
+        </form>
+    }
+    else
+    {
+        <p>Title: @movies[Model.ID - 1].Title</p>
+        <p>ID: @movies[Model.ID - 1].ID</p>
+        <p>Genre: @movies[Model.ID - 1].Genre</p>
+        <p>Year: @movies[Model.ID - 1].Year.Year</p>
+        <p>Actors: @movies[Model.ID - 1].Actors</p>
+        <p>Directors: @movies[Model.ID - 1].Directors</p>
+        
+        <form action="StorePage">
+            
+            <input type="hidden" name="ID" value="@(Model.ID - 1)" />
+            <input type="submit" value="Previous" />
+        </form>
+            <form action="StorePage">
+                <input type="hidden" name="ID" value="@(Model.ID + 1)" />
+                
+                <input type="submit" value="Next" />
+            </form>
+        
+        }
+
+    }
+
+
+
+
+
+

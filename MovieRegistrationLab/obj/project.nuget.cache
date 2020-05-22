@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "O606Gecj5wanZylwCroHwj4RwVZzcbxPAAA7TA0tt78S7PBBabKNHFL3cOT0EYn1YmcX/Sb/67s6IfvRfgGhXA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\forne\\source\\repos\\CSHARP\\MovieRegistrationLab\\MovieRegistrationLab\\MovieRegistrationLab.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\forne\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

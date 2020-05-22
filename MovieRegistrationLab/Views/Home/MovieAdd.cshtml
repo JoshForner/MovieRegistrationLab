@@ -1,0 +1,11 @@
+﻿@model Movie
+@using System.Text.Json;
+@using Microsoft.AspNetCore.Http;
+
+    <p>@Model.Title has been registered!</p>
+    <p>ID Number: @Model.ID</p>
+    <p>Genre: @Model.Genre</p>
+    <p>Year released: @Model.Year.Year</p>
+    <p>Actors: @Model.Actors</p>
+    <p>Directors: @Model.Directors</p>
+    <a href="/Home/AddMovieToList">Click here to add movie to the store page!</a>
